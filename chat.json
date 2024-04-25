@@ -1,0 +1,20 @@
+[
+    {   "userid":1,
+        "from": "Arya",
+        "to": "Ashu",
+        "time": "10:00pm",
+        "message": "HI ashu I LOVE YOU. This is your dream project"
+    },
+    {   "userid":1,
+        "from": "Arya",
+        "to": "Ashu",
+        "time": "10:01pm",
+        "message": ""
+    },
+    {   "userid":1,
+        "from": "Ashu",
+        "to": "Arya",
+        "time": "10:00pm",
+        "message": "HI arya I LOVE YOU TOO."
+    }
+]
