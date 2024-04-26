@@ -29,8 +29,22 @@ adminApp.get('/admin/:id',async (req,res)=>{
     res.send({"message":"admins list", "payload":list})
 })
 
+//post chat
+adminApp.post('/msg', async(req,res)=>{
+    //getting chat object from request
+    let msg = req.body;
+    console.log(msg);
 
-
+    //getting Indian Standard Time (IST) timestamp
+    const istTimestamp = new Date().toLocaleString('en-IN', {timeZone: 'Asia/Kolkata'});
+   
+    let finalmsg = {...msg, "time":istTimestamp}
+    
+    //posting into db
+    let result = await chatcollection.insertOne(finalmsg)
+    console.log(result)
+    res.send({"message":"admins list", "payload":"list"});
+});
 
 
 
